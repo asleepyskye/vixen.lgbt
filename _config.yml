@@ -1,2 +1,3 @@
 name: vixen.lgbt
 title: null
+include: [".well-known"]
