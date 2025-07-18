@@ -32,7 +32,7 @@
 			>
 		</p>
 		<br />
-		<p>and uhhh go follow our <a href="https://twitter.com/asleepyskye">twitter</a> or smth</p>
+		<p>and uhhh go follow our <a href="https://bsky.app/profile/vixen.lgbt">bluesky</a> or smth</p>
 	</div>
 	<footer>
 		<p class="footer-text">
