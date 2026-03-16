@@ -40,7 +40,7 @@ just. don't. be a dick to developers.
 
 take a step back from the computer. go outside, touch some grass perhaps. remember that there are **REAL** people behind these apps. people that have given up (potentially massive) chunks of their free time out of sheer goodwill to develop and create something for _you, the user_.
 
-i haven't been in the plural community long (if you wanna know, go check the creation date on our PK system or something). the sheer of hate however that we've seen in such a relatively small period of time is absurd. we personally started to volunteer our time to PK in the first place because it was one of the most helpful tools to us in our journey, and we wanted to give back.
+i haven't been in the plural community long (if you wanna know, go check the creation date on our PK system or something). the sheer amount of hate however that we've seen in such a relatively small period of time is absurd. we personally started to volunteer our time to PK in the first place because it was one of the most helpful tools to us in our journey, and we wanted to give back.
 
 i sincerely hope the community learns from this.  
 _spoiler alert: if this keeps up, people are likely just gonna stop making apps for the plural community_
