@@ -1,3 +1,43 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@property --grad-top {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #b5ddf7;
+}
+
+@property --grad-bottom {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #f5a9b8;
+}
+
+@layer base {
+	:root {
+		--grad-top: #b5ddf7;
+		--grad-bottom: #f5a9b8;
+	}
+
+	:root[data-theme='dark'] {
+		--grad-top: #090e19;
+		--grad-bottom: #4a044e;
+	}
+
+	body {
+		background-image: linear-gradient(
+			180deg,
+			var(--grad-top) 0%,
+			var(--grad-top) 75%,
+			var(--grad-bottom) 100%
+		);
+		transition:
+			--grad-top 0.5s ease-in-out,
+			--grad-bottom 0.5s ease-in-out,
+			color 0.5s ease-in-out;
+		@apply min-h-screen text-slate-900 dark:text-slate-100;
+	}
+}

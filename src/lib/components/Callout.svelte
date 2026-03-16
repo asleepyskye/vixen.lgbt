@@ -1,9 +1,9 @@
 <script lang="ts">
 	import neofox_laptop from '$lib/assets/neofox/neofox_laptop.png';
-	let { title, type = 'info', children } = $props();
+	let { type = 'info', children } = $props();
 	const types: any = {
 		note: {
-			style: 'bg-purple-50 border-purple-400 text-purple-900 text-base',
+			style: 'bg-pink-50 border-pink-400 text-pink-900 text-base',
 			image: neofox_laptop
 		},
 		warning: {
@@ -19,7 +19,7 @@
 
 <aside class="not-prose my-8 flex flex-row gap-4 rounded-r-sm border-l-4 p-4 {types[type].style}">
 	{#if types[type].image}
-		<div class="w-1/16 shrink-0 bg-slate-100">
+		<div class="w-1/16 shrink-0">
 			<img src={types[type].image} class="h-full w-full object-cover" />
 		</div>
 	{/if}
