@@ -31,6 +31,8 @@
 
 <svelte:head>
 	<title>the vixen's virtual den</title>
+	<meta name="description" content="the personal website of @asleepyskye" />
+	<meta name="theme-color" content="#b5ddf7" />
 </svelte:head>
 
 <div class="flex h-full flex-col py-8">
