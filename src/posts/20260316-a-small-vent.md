@@ -42,7 +42,7 @@ take a step back from the computer. go outside, touch some grass perhaps. rememb
 
 i haven't been in the plural community long (if you wanna know, go check the creation date on our PK system or something). the sheer amount of hate however that we've seen in such a relatively small period of time is absurd. we personally started to volunteer our time to PK in the first place because it was one of the most helpful tools to us in our journey, and we wanted to give back.
 
-i sincerely hope the community learns from this.  
+i... sincerely hope the community learns from this.  
 _spoiler alert: if this keeps up, people are likely just gonna stop making apps for the plural community_
 
 on the other hand as a quick note, if it wasn't clear enough, i do wanna acknowledge that it is just a very vocal minority that are causing the most problems. thank you to those who have actually been kind.
@@ -86,7 +86,7 @@ i hate writing conclusions. words are hard.
 i don't have a nice lil bow to tie this up in, and what's the point of repeating what i've already said?  
 if you've skipped to this point you likely don't care about what i'm saying anyways but
 
-tl;dr: step away from the fucking keyboard, and stop being a dick to people who don't deserve it  
+tl;dr: to those of you causing problems, step away from the fucking keyboard, and stop being a dick to people who don't deserve it  
 go like... direct that hate at the US government or something IDK
 
 or maybe just don't hate. there's already enough of that in the world as is right now.
