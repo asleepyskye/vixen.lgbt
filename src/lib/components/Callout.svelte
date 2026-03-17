@@ -17,13 +17,16 @@
 	};
 </script>
 
-<aside class="not-prose my-8 flex flex-row gap-4 rounded-r-sm border-l-4 p-4 {types[type].style}">
+<aside
+	class="not-prose my-8 flex flex-row items-center gap-4 rounded-r-sm border-l-4 p-4 {types[type]
+		.style}"
+>
 	{#if types[type].image}
-		<div class="w-1/16 shrink-0">
+		<div class="h-10 w-10 shrink-1">
 			<img src={types[type].image} class="h-full w-full object-cover" />
 		</div>
 	{/if}
-	<div class="leading-relaxed">
+	<div class="flex-1 leading-relaxed">
 		{@render children?.()}
 	</div>
 </aside>
