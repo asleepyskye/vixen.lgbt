@@ -35,7 +35,7 @@ i'm gonna try to keep this fairly brief, as after all, i think Iris has already 
 
 you have every right to be upset or sad that a tool you use is shutdown -- i get that, i also hate change. this however **DOES NOT** give you a free pass to take out your frustrations on the developers of said tool (or similar ones). i don't care if the views of a developer don't match yours, it still doesn't give you the right to spew the hate you have been. _nobody_ deserves the level of hate that some of these developers have received.
 
-**stop biting the hand that feeds you.**  
+**stop biting the hand that feeds you.**
 
 take a step back from the computer. go outside, touch some grass perhaps. remember that there are **REAL** people behind these apps. people that have given up (potentially massive) chunks of their free time out of sheer goodwill to develop and create something for _you, the user_.
 

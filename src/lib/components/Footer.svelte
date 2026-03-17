@@ -3,7 +3,7 @@
 	import emoji_transflag from '$lib/assets/emoji/trans.svg';
 </script>
 
-<footer class="mx-auto text-center">
+<footer class="mx-auto rounded-xl p-4 text-center dark:bg-[#000000]/40">
 	<p class="footer-text">
 		<span class="footer-emoji">
 			<img src={neofox_flop_sleep} alt="neofox_flop_sleep - a fox sleeping" class="emoji" />
@@ -38,6 +38,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.3rem;
+		white-space: nowrap;
 	}
 	.footer-emoji {
 		display: inline-flex;

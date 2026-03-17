@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
+	import { PANEL_STYLE } from '$lib/consts';
 
 	let { data } = $props();
 
@@ -12,12 +13,11 @@
 	<meta name="article:author" content="skye" />
 </svelte:head>
 
-<article
-	class="mx-auto my-14 max-w-4xl rounded-2xl border border-[#fff9f9]/15 bg-[#fff9f9]/40 px-4 py-12 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[14.2px] duration-300 ease-in-out sm:px-6 lg:px-8 dark:bg-[#000000]/60"
->
+<article class="mx-auto max-w-4xl ${PANEL_STYLE}">
 	<header class="mb-12">
+		<a href="/" class="font-mono"> &lt; back</a>
 		<h1
-			class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-50"
+			class="py-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl dark:text-slate-50"
 		>
 			{fm?.title}
 		</h1>

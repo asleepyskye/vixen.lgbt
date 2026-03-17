@@ -24,14 +24,14 @@
 
 	:root[data-theme='dark'] {
 		--grad-top: #090e19;
-		--grad-bottom: #4a044e;
+		--grad-bottom: #cba0fa;
 	}
 
 	body {
 		background-image: linear-gradient(
 			180deg,
 			var(--grad-top) 0%,
-			var(--grad-top) 75%,
+			var(--grad-top) 65%,
 			var(--grad-bottom) 100%
 		);
 		transition:
