@@ -35,11 +35,11 @@
 	<meta name="theme-color" content="#b5ddf7" />
 </svelte:head>
 
-<div class="flex h-screen flex-col py-8">
+<div class="flex flex-col py-8 lg:h-screen">
 	<div class="mx-auto w-full max-w-[80%] flex-1 ${PANEL_STYLE} min-h-0">
 		<!-- I LOVE FLEX CONTAINERS! don't @ me. ill fix this someday... maybe -->
-		<div class="flex h-full min-h-0 w-full flex-col gap-4 font-mono md:p-4 lg:flex-row">
-			<div class="w-full rounded-lg p-4 lg:w-1/3">
+		<div class="flex h-full min-h-0 flex-col gap-4 font-mono md:p-4 lg:flex-row">
+			<div class="rounded-lg p-4 lg:w-1/3">
 				<h1
 					class="text-3xl
 tracking-tight text-slate-900 sm:text-4xl dark:text-slate-50"
@@ -82,7 +82,7 @@ tracking-tight text-slate-900 sm:text-4xl dark:text-slate-50"
 				</div>
 			</div>
 
-			<div class="w-full overflow-y-auto rounded-lg border border-slate-300 p-8 lg:w-2/3">
+			<div class="overflow-y-auto rounded-lg border border-slate-300 p-8 lg:w-2/3">
 				<h2
 					class="text-xl
 tracking-tight text-slate-900 underline sm:text-xl dark:text-slate-50"
