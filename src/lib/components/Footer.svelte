@@ -16,8 +16,7 @@
 		</span>
 	</p>
 	<p class="footer-text">
-		neofox emojis: <a href="https://volpeon.ink/emojis/neofox/">Neofox by Volpeon</a>licensed under
-		CC BY-NC-SA 4.0.
+		neofox emojis: <a href="https://volpeon.ink/emojis/neofox/">Neofox by Volpeon</a>
 	</p>
 </footer>
 

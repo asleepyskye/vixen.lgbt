@@ -32,13 +32,12 @@
 <svelte:head>
 	<title>the vixen's virtual den</title>
 	<meta name="description" content="the personal website of @asleepyskye" />
-	<meta name="theme-color" content="#b5ddf7" />
 </svelte:head>
 
-<div class="flex flex-col py-8 lg:h-screen">
-	<div class="mx-auto w-full max-w-[80%] flex-1 ${PANEL_STYLE} min-h-0">
+<div class="flex flex-col items-center px-4 pb-4 sm:py-8 lg:h-screen">
+	<div class="w-full flex-1 ${PANEL_STYLE} min-h-0 sm:max-w-[80%]">
 		<!-- I LOVE FLEX CONTAINERS! don't @ me. ill fix this someday... maybe -->
-		<div class="flex h-full min-h-0 flex-col gap-4 font-mono md:p-4 lg:flex-row">
+		<div class="flex min-h-0 flex-col gap-4 font-mono md:p-4 lg:flex-row">
 			<div class="rounded-lg p-4 lg:w-1/3">
 				<h1
 					class="text-3xl
