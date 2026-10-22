@@ -23,7 +23,7 @@
 			link: 'https://nyanyamachine.dev'
 		},
 		{
-			img: 'https://media.vixen.lgbt/88x31.gif',
+			img: 'https://cdn.foxpost.ing/vixen.lgbt/88x31.gif',
 			link: 'https://vixen.lgbt'
 		}
 	];
