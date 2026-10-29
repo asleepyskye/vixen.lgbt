@@ -1,0 +1,35 @@
+[shorturls]
+gh = "github:{path}"
+tngl = "git+https://tangled.org/{path}"
+vulp = "git+https://git.vulpe.systems/{path}"
+vs = "git+https://git.vulpe.systems/vulpe-systems/{path}"
+
+[all_follow]
+nixpkgs = ["nixpkgs-unstable"]
+flake-utils = "flake-utils"
+treefmt-nix = ""
+
+[inputs.nixpkgs]
+url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst"
+patches = [
+    "https://github.com/NixOS/nixpkgs/pull/580657"
+]
+
+[inputs.actions-nix]
+url = "gh:nialov/actions.nix"
+
+[inputs.flake-utils]
+url = "gh:numtide/flake-utils"
+
+[inputs.git-hooks]
+url = "gh:cachix/git-hooks.nix"
+
+[inputs.tack]
+url = "gh:manic-systems/tack"
+exclude_follow = ["nixpkgs"]
+
+[inputs.treefmt-nix]
+url = "gh:numtide/treefmt-nix"
+
+[tack]
+recomposable = true
