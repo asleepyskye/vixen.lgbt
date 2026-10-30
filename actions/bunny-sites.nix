@@ -28,9 +28,6 @@
   };
   jobs.deploy = {
     runs-on = "nixos";
-    container = {
-      image = "nixery.dev/shell/nixversions.latest/git";
-    };
     steps = [
       {
         name = "checkout";
