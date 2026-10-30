@@ -37,6 +37,10 @@
         };
       }
       {
+        name = "tack why must you do this to me";
+        run = "nix run --inputs-from . github:manic-systems/tack#tack materialize nixpkgs";
+      }
+      {
         name = "build";
         run = "nix build .#default";
       }
