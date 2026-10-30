@@ -29,8 +29,8 @@
         };
       }
       {
-        name = "tack materialize";
-        run = "nix run --impure --expr 'import ./.tack { }' 'tack.packages.x86_64-linux.default' -- materialize nixpkgs";
+        name = "tack build patched";
+        run = "nix-build .tack -A _patched || true";
       }
       {
         name = "build";

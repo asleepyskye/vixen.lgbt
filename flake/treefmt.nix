@@ -25,6 +25,8 @@ in
   };
 
   settings.global.excludes = [
+    ".forgejo/*"
+    ".tack/*"
     "node_modules/*"
     ".svelte-kit/*"
     "build/*"
