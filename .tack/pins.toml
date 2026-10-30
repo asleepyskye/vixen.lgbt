@@ -6,7 +6,7 @@ vs = "git+https://git.vulpe.systems/vulpe-systems/{path}"
 
 [all_follow]
 nixpkgs = ["nixpkgs-unstable"]
-flake-utils = "flake-utils"
+flake-parts = "flake-parts"
 treefmt-nix = ""
 
 [inputs.nixpkgs]
@@ -18,8 +18,8 @@ patches = [
 [inputs.actions-nix]
 url = "gh:nialov/actions.nix"
 
-[inputs.flake-utils]
-url = "gh:numtide/flake-utils"
+[inputs.flake-parts]
+url = "gh:hercules-ci/flake-parts"
 
 [inputs.git-hooks]
 url = "gh:cachix/git-hooks.nix"

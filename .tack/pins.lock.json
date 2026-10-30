@@ -1,71 +1,71 @@
 {
-	"$declared": {
-		"actions-nix": "github:nialov/actions.nix",
-		"flake-utils": "github:numtide/flake-utils",
-		"git-hooks": "github:cachix/git-hooks.nix",
-		"nixpkgs": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst",
-		"tack": "github:manic-systems/tack",
-		"treefmt-nix": "github:numtide/treefmt-nix"
-	},
-	"actions-nix": {
-		"type": "github",
-		"owner": "nialov",
-		"repo": "actions.nix",
-		"rev": "25d2104c420cceacbf5b3935e2dd1dbfabe01d8c",
-		"narHash": "sha256-TqhsEw7SheE8QPpRUiCPA4UpL6qCgRstxkR6dIFD0zs=",
-		"lastModified": 1782299217
-	},
-	"flake-utils": {
-		"type": "github",
-		"owner": "numtide",
-		"repo": "flake-utils",
-		"rev": "b7a79d3fea1e214f6d668d521cecec0c01e26544",
-		"narHash": "sha256-Zf/xfQEAasnwnmEfHqW/4hjDE/s44yn2hD4RuVIZRjA=",
-		"lastModified": 1791914995
-	},
-	"git-hooks": {
-		"type": "github",
-		"owner": "cachix",
-		"repo": "git-hooks.nix",
-		"rev": "1ba1dbfe28738c9a71c266be6efa5b89e75491a9",
-		"narHash": "sha256-VAhpCOmrun/KXimYfR8NM88bciKCui7CqHHhThSzgag=",
-		"lastModified": 1791909798
-	},
-	"nixpkgs": {
-		"type": "tarball",
-		"url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1104102.e62746b0b472/nixexprs.tar.zst?rev=e62746b0b472753ef019baceab6f1e2e52014980&lastModified=1793225069",
-		"rev": "e62746b0b472753ef019baceab6f1e2e52014980",
-		"narHash": "sha256-GYpArmwi/iMuX2ov31oCBhAXRMJdNX9kOl2LZHCuR6M=",
-		"lastModified": 1793225069,
-		"patched": {
-			"path": "/nix/store/3njdrcslqh2ynryagkbz9bi1ljnhmywi-source",
-			"narHash": "sha256-VaU68ZgCLUMjpsxC9dm7nOHOnuSACUDqmrOoB/NIeBo=",
-			"lastModified": 1793225069,
-			"patches": [
-				{
-					"source": "https://github.com/NixOS/nixpkgs/pull/580657",
-					"url": "https://github.com/NixOS/nixpkgs/pull/580657",
-					"file": "patches/nixpkgs/pr-580657.patch",
-					"sha256": "5c8b235088a986bb7e804cf2e620f155646d63af95e14fca06b243d7e98eddd1",
-					"head": "12aaad660af1c24f04c8ef3ee4cba91ad82a008a"
-				}
-			]
-		}
-	},
-	"tack": {
-		"type": "github",
-		"owner": "manic-systems",
-		"repo": "tack",
-		"rev": "c5b02fb90d4ec5f74e90710e4d2aa335b1d6c280",
-		"narHash": "sha256-jIDNBwu9nXXu7iGWiQ9QpUIeC0IzloDdYuqvzlBfqr4=",
-		"lastModified": 1793235360
-	},
-	"treefmt-nix": {
-		"type": "github",
-		"owner": "numtide",
-		"repo": "treefmt-nix",
-		"rev": "0d6d739a833ba9a9c93034862e4a7b061a062a1c",
-		"narHash": "sha256-C3alQ2MEt0zVrUSho5NUDo3jmhbff72++bfwoqT9Omo=",
-		"lastModified": 1791885023
-	}
+  "$declared": {
+    "actions-nix": "github:nialov/actions.nix",
+    "flake-parts": "github:hercules-ci/flake-parts",
+    "git-hooks": "github:cachix/git-hooks.nix",
+    "nixpkgs": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst",
+    "tack": "github:manic-systems/tack",
+    "treefmt-nix": "github:numtide/treefmt-nix"
+  },
+  "actions-nix": {
+    "type": "github",
+    "owner": "nialov",
+    "repo": "actions.nix",
+    "rev": "25d2104c420cceacbf5b3935e2dd1dbfabe01d8c",
+    "narHash": "sha256-TqhsEw7SheE8QPpRUiCPA4UpL6qCgRstxkR6dIFD0zs=",
+    "lastModified": 1782299217
+  },
+  "flake-parts": {
+    "type": "github",
+    "owner": "hercules-ci",
+    "repo": "flake-parts",
+    "rev": "024633cd702b10285db5cb19b40ad48d2399ba60",
+    "narHash": "sha256-zTwuwezD0w3hpga6a6P8emidzAZFyWqlNeRBlpWOOl8=",
+    "lastModified": 1790898470
+  },
+  "git-hooks": {
+    "type": "github",
+    "owner": "cachix",
+    "repo": "git-hooks.nix",
+    "rev": "1ba1dbfe28738c9a71c266be6efa5b89e75491a9",
+    "narHash": "sha256-VAhpCOmrun/KXimYfR8NM88bciKCui7CqHHhThSzgag=",
+    "lastModified": 1791909798
+  },
+  "nixpkgs": {
+    "type": "tarball",
+    "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1104102.e62746b0b472/nixexprs.tar.zst?rev=e62746b0b472753ef019baceab6f1e2e52014980&lastModified=1793225069",
+    "rev": "e62746b0b472753ef019baceab6f1e2e52014980",
+    "narHash": "sha256-GYpArmwi/iMuX2ov31oCBhAXRMJdNX9kOl2LZHCuR6M=",
+    "lastModified": 1793225069,
+    "patched": {
+      "path": "/nix/store/3njdrcslqh2ynryagkbz9bi1ljnhmywi-source",
+      "narHash": "sha256-VaU68ZgCLUMjpsxC9dm7nOHOnuSACUDqmrOoB/NIeBo=",
+      "lastModified": 1793225069,
+      "patches": [
+        {
+          "source": "https://github.com/NixOS/nixpkgs/pull/580657",
+          "url": "https://github.com/NixOS/nixpkgs/pull/580657",
+          "file": "patches/nixpkgs/pr-580657.patch",
+          "sha256": "5c8b235088a986bb7e804cf2e620f155646d63af95e14fca06b243d7e98eddd1",
+          "head": "12aaad660af1c24f04c8ef3ee4cba91ad82a008a"
+        }
+      ]
+    }
+  },
+  "tack": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "tack",
+    "rev": "c5b02fb90d4ec5f74e90710e4d2aa335b1d6c280",
+    "narHash": "sha256-jIDNBwu9nXXu7iGWiQ9QpUIeC0IzloDdYuqvzlBfqr4=",
+    "lastModified": 1793235360
+  },
+  "treefmt-nix": {
+    "type": "github",
+    "owner": "numtide",
+    "repo": "treefmt-nix",
+    "rev": "0d6d739a833ba9a9c93034862e4a7b061a062a1c",
+    "narHash": "sha256-C3alQ2MEt0zVrUSho5NUDo3jmhbff72++bfwoqT9Omo=",
+    "lastModified": 1791885023
+  }
 }

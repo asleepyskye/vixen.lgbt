@@ -1,56 +1,85 @@
 {
   outputs =
-    { self, ... }@args:
+    { self }:
     let
-      inputs = (import ./.tack) {
-        overrides = args.tackOverrides or { };
+      inputs = (import ./.tack) // {
+        inherit self;
       };
-      inherit (inputs) nixpkgs flake-utils;
+      extendedSelf = self // {
+        inherit inputs;
+      };
     in
-    flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = nixpkgs.legacyPackages.${system};
-        treefmt = inputs.treefmt-nix.lib.evalModule pkgs ./flake/treefmt.nix;
-        pre-commit = inputs.git-hooks.lib.${system}.run {
-          src = ./.;
-          package = pkgs.prek;
-          excludes = [
-            ".tack/default.nix"
-            ".tack/pins.lock.json"
-          ];
-          hooks = {
-            editorconfig-checker.enable = true;
-            end-of-file-fixer.enable = true;
-            keep-sorted.enable = true;
-            mixed-line-endings.enable = true;
-            nixfmt = {
-              enable = true;
-              settings.indent = 2;
-              settings.width = 120;
-            };
-            trim-trailing-whitespace.enable = true;
-          };
-        };
-      in
+    inputs.flake-parts.lib.mkFlake
       {
-        formatter = treefmt.config.build.wrapper;
-        checks.pre-commit = pre-commit;
-        devShells.default = pkgs.mkShell {
-          packages = [
-            inputs.tack.packages.${system}.default
-            treefmt.config.build.wrapper
-            # keep-sorted start
-            pkgs.bunny
-            pkgs.just
-            pkgs.nixfmt
-            pkgs.nodejs_24
-            pkgs.prek
-            # keep-sorted end
-          ]
-          ++ pre-commit.enabledPackages;
-          inherit (pre-commit) shellHook;
-        };
+        inherit inputs;
+        self = extendedSelf;
       }
-    );
+      {
+        systems = [
+          "x86_64-linux"
+        ];
+        imports = [
+          inputs.actions-nix.flakeModules.default
+          inputs.treefmt-nix.flakeModule
+          ./actions
+        ];
+
+        perSystem =
+          {
+            config,
+            pkgs,
+            system,
+            inputs',
+            ...
+          }:
+          let
+            nodejs = pkgs.nodejs_26;
+          in
+          {
+            _module.args.pkgs = import inputs.nixpkgs {
+              inherit system;
+            };
+            treefmt.imports = [ ./flake/treefmt.nix ];
+
+            pre-commit.settings = {
+              package = pkgs.prek;
+              excludes = [
+                ".tack/default.nix"
+                ".tack/pins.lock.json"
+              ];
+              hooks = {
+                editorconfig-checker.enable = true;
+                end-of-file-fixer.enable = true;
+                keep-sorted.enable = true;
+                mixed-line-endings.enable = true;
+                nixfmt = {
+                  enable = true;
+                  settings.indent = 2;
+                  settings.width = 120;
+                };
+                trim-trailing-whitespace.enable = true;
+              };
+            };
+
+            packages = {
+              default = pkgs.callPackage ./package.nix { inherit nodejs; };
+              bunny = pkgs.bunny; # expose bunny here until it's (hopefully) merged
+            };
+
+            devShells.default = pkgs.mkShell {
+              packages = [
+                inputs'.tack.packages.tack
+                config.treefmt.build.wrapper
+                nodejs
+                # keep-sorted start
+                pkgs.bunny
+                pkgs.just
+                pkgs.nixfmt
+                pkgs.prek
+                # keep-sorted end
+              ];
+              shellHook = config.pre-commit.devShell.shellHook;
+            };
+          };
+      };
 }
