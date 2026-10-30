@@ -14,20 +14,12 @@
       ];
     };
   };
-  env = {
-    NIX_CONFIG = ''
-      build-users-group =
-      extra-experimental-features = nix-command flakes
-      extra-substituters = https://cache-aux.foxpost.ing https://ci.vulpe.systems/nix-cache https://nix-community.cachix.org
-      extra-trusted-public-keys = vulpe-cache-aux:7uN1rt1iBh4/U93aYJgWSHLwH6z7QXQIH59X3hX/svA= ci.vulpe.systems-1:wl5kb1c8tSW8sMxgIKhYj2Wlyt/VeXCw79VgXQByYVg= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=
-    '';
-  };
   concurrency = {
     group = "bunny-sites";
     cancel-in-progress = false;
   };
   jobs.deploy = {
-    runs-on = "nixos";
+    runs-on = "skye-ci-base-image";
     steps = [
       {
         name = "checkout";
@@ -37,8 +29,8 @@
         };
       }
       {
-        name = "tack why must you do this to me";
-        run = "nix run --inputs-from . github:manic-systems/tack#tack materialize nixpkgs";
+        name = "tack materialize";
+        run = "nix run --impure --expr 'import ./.tack { }' 'tack.packages.x86_64-linux.default' -- materialize nixpkgs";
       }
       {
         name = "build";
