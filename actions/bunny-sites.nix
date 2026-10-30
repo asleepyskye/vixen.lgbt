@@ -20,6 +20,7 @@
   };
   jobs.deploy = {
     runs-on = "skye-ci-base-image";
+    enable-openid-connect = true;
     steps = [
       {
         name = "checkout";

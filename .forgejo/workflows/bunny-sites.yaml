@@ -8,6 +8,7 @@ concurrency:
   group: bunny-sites
 jobs:
   deploy:
+    enable-openid-connect: true
     runs-on: skye-ci-base-image
     steps:
     - name: checkout
