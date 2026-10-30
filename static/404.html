@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      href="https://cdn.foxpost.ing/font/AtkinsonHyperlegibleMono-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <title>404</title>
+    <style>
+      :root {
+        --bg: #161616;
+        --fg: #eee;
+        --muted: #777;
+      }
+      @font-face {
+        font-family: "Atkinson Hyperlegible Mono";
+        src: url("https://cdn.foxpost.ing/font/AtkinsonHyperlegibleMono-Regular.woff2")
+          format("woff2");
+        font-weight: normal;
+        font-style: normal;
+        font-display: force;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "Atkinson Hyperlegible Mono", ui-monospace, monospace;
+        text-align: center;
+      }
+      .img {
+        width: min(160px, 30vw);
+        height: auto;
+        display: block;
+      }
+      h1 {
+        font-size: 8rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="img"
+      src="https://cdn.foxpost.ing/neofox/neofox_up_sleep.png"
+      alt="A fox emote sleeping face up with it's eyes closed."
+    />
+    <h1>404</h1>
+    <p>
+      our infra foxes worked really hard to try and find this file however it
+      seems to be missing
+    </p>
+  </body>
+</html>
