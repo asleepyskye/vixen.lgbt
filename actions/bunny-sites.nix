@@ -29,6 +29,10 @@
         };
       }
       {
+        uses = "https://github.com/Mic92/niks3-action@v1.5.0";
+        "with".server-url = "https://niks3.fennec-cichlid.ts.net";
+      }
+      {
         name = "tack build patched";
         run = "nix-build .tack -A _patched || true";
       }
