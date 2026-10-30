@@ -42,8 +42,10 @@
           BUNNYNET_API_KEY = "\${{ secrets.BUNNYNET_API_KEY }}";
         };
         run = ''
-          nix run .#bunny -- \
-            sites deploy ./result --prod --output json
+          out=$(nix run .#bunny -- sites deploy ./result --output json)
+          echo "$out"
+          jq -r --arg sha "$GITHUB_SHA" -f .forgejo/deploy-summary.jq <<<"$out" >> "$FORGEJO_STEP_SUMMARY"
+          jq -e .live <<<"$out" >/dev/null
         '';
       }
     ];
